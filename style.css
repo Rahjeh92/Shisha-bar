@@ -47,12 +47,14 @@ p {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    width: fit-content;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
 }
 
 .category img {
-    width: 100%;
+    width: 80px;
+    height: auto;
     border-radius: 10px;
 }
 
@@ -71,8 +73,9 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 18px;
     transition: background 0.3s ease;
+    width: 100%;
 }
 
 button:hover {
@@ -90,12 +93,23 @@ button:hover {
     text-align: right;
 }
 
-
 .menu-items p {
     margin: 5px 0;
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .categories {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .category {
+        width: 45%;
+    }
+}
+
 @media (max-width: 768px) {
     .categories {
         flex-direction: column;
@@ -108,5 +122,19 @@ button:hover {
 
     .logo {
         width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category {
+        width: 100%;
+    }
+
+    .logo {
+        width: 200px;
+    }
+
+    button {
+        font-size: 16px;
     }
 }
