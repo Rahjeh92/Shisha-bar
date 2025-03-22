@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why No? Menü</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><img src="Image/logo.png" class="logo"></h1>
+    </header>
+
+    <section class="categories">
+        <div class="category">
+            <img src="Image/icon/hookah.png" alt="Shisha">
+            <h2>Shisha-Geschmacksrichtungen</h2>
+            <button onclick="toggleMenu('shisha-menu')">Anzeigen</button>
+            <div class="menu-items" id="shisha-menu">
+                <p>Apfelgeschmack - 10€</p>
+                <p>Traubengeschmack - 12€</p>
+                <p>Minzgeschmack - 9€</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <img src="Image/icon/drinks.png" alt="Getränke">
+            <h2>Getränke</h2>
+            <button onclick="toggleMenu('drinks-menu')">Anzeigen</button>
+            <div class="menu-items" id="drinks-menu">
+                <p>Orangensaft - 5€</p>
+                <p>Türkischer Kaffee - 3€</p>
+                <p>Marokkanischer Tee - 4€</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
