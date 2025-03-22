@@ -48,7 +48,7 @@ p {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 300px;
+    max-width: 85%;
     text-align: center;
 }
 
@@ -62,6 +62,36 @@ p {
     font-size: 22px;
     color: white;
     margin-bottom: 10px;
+}
+
+.items {
+    display: none;
+    margin-top: 10px;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+.name {
+    text-align: left;
+}
+
+td:nth-child(1) {
+    text-align: left;
+}
+
+td:nth-child(2) {
+    text-align: right;
 }
 
 /* Buttons */
@@ -79,7 +109,7 @@ button {
 }
 
 button:hover {
-    background: gray;
+    background: rgb(255, 77, 225);
 }
 
 /* Menu Items (Initially Hidden) */
@@ -87,7 +117,7 @@ button:hover {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease-in-out;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.6);
     padding: 0 10px;
     border-radius: 5px;
     text-align: right;
