@@ -5,86 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why No? Menü</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main CSS File -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body background="assets/img/background.jpg">
-
+<body>
+    <!-- Header Section -->
     <header>
-        <h1><img src="assets/img/logo.png" class="logo"></h1>
+        <h1><img src="assets/img/logo.png" class="logo" alt="Why No? Logo"></h1>
     </header>
 
+    <!-- Categories Section -->
     <section class="categories">
         <div class="category">
-            <img src="assets/img/icon/hookah.png" alt="Shisha">
+            <img src="assets/img/icons/hookah.png" alt="Shisha">
             <h2>Shisha</h2>
             <button onclick="toggleMenu('shisha-menu')">Anzeigen</button>
             <div class="menu-items" id="shisha-menu">
                 <table>
-                    <tr>
-                        <th class="name">Name</th>
-                        <th class="price">Price</th>
-                    </tr>
-                    <tr>
-                        <td>Apfel</td>
-                        <td>10 €</td>
-                    </tr>
-                    <tr>
-                        <td>Doppelapfel</td>
-                        <td>12 €</td>
-                    </tr>
-                    <tr>
-                        <td>Traube</td>
-                        <td>12 €</td>
-                    </tr>
-                    <tr>
-                        <td>Minze</td>
-                        <td>9 €</td>
-                    </tr>
-                    <tr>
-                        <td>Wassermelone</td>
-                        <td>11 €</td>
-                    </tr>
-                    <tr>
-                        <td>Pfirsich</td>
-                        <td>11 €</td>
-                    </tr>
-                    <tr>
-                        <td>Zitrone-Minze</td>
-                        <td>12 €</td>
-                    </tr>
-                    <tr>
-                        <td>Blaubeere</td>
-                        <td>12 €</td>
-                    </tr>
-                    <tr>
-                        <td>Erdbeere</td>
-                        <td>11 €</td>
-                    </tr>
-                    <tr>
-                        <td>Mango</td>
-                        <td>12 €</td>
-                    </tr>
-                    <tr>
-                        <td>Kirsche</td>
-                        <td>11 €</td>
-                    </tr>
-                    <tr>
-                        <td>Vanille</td>
-                        <td>10 €</td>
-                    </tr>
-                    <tr>
-                        <td>Kokosnuss</td>
-                        <td>12 €</td>
-                    </tr>
-                    <tr>
-                        <td>Energy (Red Bull Geschmack)</td>
-                        <td>13 €</td>
-                    </tr>
-                    <tr>
-                        <td>Mix (Eigene Kombination)</td>
-                        <td>14 €</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th class="name">Name</th>
+                            <th class="price">Preis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apfel</td>
+                            <td>10 €</td>
+                        </tr>
+                        <tr>
+                            <td>Doppelapfel</td>
+                            <td>12 €</td>
+                        </tr>
+                        <tr>
+                            <td>Traube</td>
+                            <td>12 €</td>
+                        </tr>
+                        <tr>
+                            <td>Minze</td>
+                            <td>9 €</td>
+                        </tr>
+                        <tr>
+                            <td>Wassermelone</td>
+                            <td>11 €</td>
+                        </tr>
+                        <tr>
+                            <td>Pfirsich</td>
+                            <td>11 €</td>
+                        </tr>
+                        <tr>
+                            <td>Zitrone-Minze</td>
+                            <td>12 €</td>
+                        </tr>
+                        <tr>
+                            <td>Blaubeere</td>
+                            <td>12 €</td>
+                        </tr>
+                        <tr>
+                            <td>Erdbeere</td>
+                            <td>11 €</td>
+                        </tr>
+                        <tr>
+                            <td>Mango</td>
+                            <td>12 €</td>
+                        </tr>
+                        <tr>
+                            <td>Kirsche</td>
+                            <td>11 €</td>
+                        </tr>
+                        <tr>
+                            <td>Vanille</td>
+                            <td>10 €</td>
+                        </tr>
+                        <tr>
+                            <td>Kokosnuss</td>
+                            <td>12 €</td>
+                        </tr>
+                        <tr>
+                            <td>Energy (Red Bull Geschmack)</td>
+                            <td>13 €</td>
+                        </tr>
+                        <tr>
+                            <td>Mix (Eigene Kombination)</td>
+                            <td>14 €</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -92,71 +102,75 @@
 
     <section class="categories">
         <div class="category">
-            <img src="assets/img/icon/drinks.png" alt="Getränke">
+            <img src="assets/img/icons/drinks.png" alt="Getränke">
             <h2>Getränke</h2>
             <button onclick="toggleMenu('drinks-menu')">Anzeigen</button>
             <div class="menu-items" id="drinks-menu">
                 <table>
-                    <tr>
-                        <th class="name">Name</th>
-                        <th class="price">Price</th>
-                    </tr>
-                    <tr>
-                        <td>Bier</td>
-                        <td>4 €</td>
-                    </tr>
-                    <tr>
-                        <td>Weißwein</td>
-                        <td>5 €</td>
-                    </tr>
-                    <tr>
-                        <td>Rotwein</td>
-                        <td>5 €</td>
-                    </tr>
-                    <tr>
-                        <td>Whisky (Single)</td>
-                        <td>7 €</td>
-                    </tr>
-                    <tr>
-                        <td>Whisky (Double)</td>
-                        <td>12 €</td>
-                    </tr>
-                    <tr>
-                        <td>Wodka (Shot)</td>
-                        <td>4 €</td>
-                    </tr>
-                    <tr>
-                        <td>Gin Tonic</td>
-                        <td>8 €</td>
-                    </tr>
-                    <tr>
-                        <td>Rum Cola</td>
-                        <td>8 €</td>
-                    </tr>
-                    <tr>
-                        <td>Tequila (Shot)</td>
-                        <td>5 €</td>
-                    </tr>
-                    <tr>
-                        <td>Mojito</td>
-                        <td>9 €</td>
-                    </tr>
-                    <tr>
-                        <td>Caipirinha</td>
-                        <td>9 €</td>
-                    </tr>
-                    <tr>
-                        <td>Piña Colada</td>
-                        <td>10 €</td>
-                    </tr>
-                    <tr>
-                        <td>Margarita</td>
-                        <td>10 €</td>
-                    </tr>
-                    <tr>
-                        <td>Long Island Iced Tea</td>
-                        <td>12 €</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th class="name">Name</th>
+                            <th class="price">Preis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bier</td>
+                            <td>4 €</td>
+                        </tr>
+                        <tr>
+                            <td>Weißwein</td>
+                            <td>5 €</td>
+                        </tr>
+                        <tr>
+                            <td>Rotwein</td>
+                            <td>5 €</td>
+                        </tr>
+                        <tr>
+                            <td>Whisky (Single)</td>
+                            <td>7 €</td>
+                        </tr>
+                        <tr>
+                            <td>Whisky (Double)</td>
+                            <td>12 €</td>
+                        </tr>
+                        <tr>
+                            <td>Wodka (Shot)</td>
+                            <td>4 €</td>
+                        </tr>
+                        <tr>
+                            <td>Gin Tonic</td>
+                            <td>8 €</td>
+                        </tr>
+                        <tr>
+                            <td>Rum Cola</td>
+                            <td>8 €</td>
+                        </tr>
+                        <tr>
+                            <td>Tequila (Shot)</td>
+                            <td>5 €</td>
+                        </tr>
+                        <tr>
+                            <td>Mojito</td>
+                            <td>9 €</td>
+                        </tr>
+                        <tr>
+                            <td>Caipirinha</td>
+                            <td>9 €</td>
+                        </tr>
+                        <tr>
+                            <td>Piña Colada</td>
+                            <td>10 €</td>
+                        </tr>
+                        <tr>
+                            <td>Margarita</td>
+                            <td>10 €</td>
+                        </tr>
+                        <tr>
+                            <td>Long Island Iced Tea</td>
+                            <td>12 €</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -164,60 +178,77 @@
 
     <section class="categories">
         <div class="category">
-            <img src="assets/img/icon/coffee.png" alt="Warm Getränke">
-            <h2>Warm Getränke</h2>
+            <img src="assets/img/icons/coffee.png" alt="Warme Getränke">
+            <h2>Warme Getränke</h2>
             <button onclick="toggleMenu('warm-drinks-menu')">Anzeigen</button>
             <div class="menu-items" id="warm-drinks-menu">
                 <table>
-                    <tr>
-                        <th class="name">Name</th>
-                        <th class="price">Price</th>
-                    </tr>
-                    <tr>
-                        <td>Schwarzer Tee</td>
-                        <td>3 €</td>
-                    </tr>
-                    <tr>
-                        <td>Grüner Tee</td>
-                        <td>3.50 €</td>
-                    </tr>
-                    <tr>
-                        <td>Frischer Minztee</td>
-                        <td>4 €</td>
-                    </tr>
-                    <tr>
-                        <td>Heiße Schokolade</td>
-                        <td>4.50 €</td>
-                    </tr>
-                    <tr>
-                        <td>Espresso</td>
-                        <td>2.50 €</td>
-                    </tr>
-                    <tr>
-                        <td>Cappuccino</td>
-                        <td>4 €</td>
-                    </tr>
-                    <tr>
-                        <td>Latte Macchiato</td>
-                        <td>4.50 €</td>
-                    </tr>
-                    <tr>
-                        <td>Chai Latte</td>
-                        <td>5 €</td>
-                    </tr>
-                    <tr>
-                        <td>Ingwer-Zitronen-Tee</td>
-                        <td>4.50 €</td>
-                    </tr>
-                    <tr>
-                        <td>Heißer Apfelsaft mit Zimt</td>
-                        <td>5 €</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th class="name">Name</th>
+                            <th class="price">Preis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Schwarzer Tee</td>
+                            <td>3 €</td>
+                        </tr>
+                        <tr>
+                            <td>Grüner Tee</td>
+                            <td>3.50 €</td>
+                        </tr>
+                        <tr>
+                            <td>Frischer Minztee</td>
+                            <td>4 €</td>
+                        </tr>
+                        <tr>
+                            <td>Heiße Schokolade</td>
+                            <td>4.50 €</td>
+                        </tr>
+                        <tr>
+                            <td>Espresso</td>
+                            <td>2.50 €</td>
+                        </tr>
+                        <tr>
+                            <td>Cappuccino</td>
+                            <td>4 €</td>
+                        </tr>
+                        <tr>
+                            <td>Latte Macchiato</td>
+                            <td>4.50 €</td>
+                        </tr>
+                        <tr>
+                            <td>Chai Latte</td>
+                            <td>5 €</td>
+                        </tr>
+                        <tr>
+                            <td>Ingwer-Zitronen-Tee</td>
+                            <td>4.50 €</td>
+                        </tr>
+                        <tr>
+                            <td>Heißer Apfelsaft mit Zimt</td>
+                            <td>5 €</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
     </section>
 
+    <!-- Footer Section -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load Footer Dynamically -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+
+    <!-- Main JavaScript File -->
     <script src="assets/js/script.js" defer></script>
 </body>
 
