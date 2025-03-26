@@ -1,276 +1,418 @@
 /* =============================
-   General Styles
-   ============================= */
+    Color Variables (Custom Properties for Color Scheme)
+    ============================= */
+:root {
+    --primary-color: #d81b60;
+    /* Pink for main accents */
+    --secondary-color: #6a1b9a;
+    /* Purple for secondary accents */
+    --highlight-color: rgb(255, 77, 225);
+    /* Hover state color */
+    --background-color: rgba(231, 43, 190, 0.6);
+    /* Category background */
+    --text-color-light: #ffffff;
+    /* Light text color */
+    --text-color-dark: #333333;
+    /* Dark text color for contrast */
+    --button-color: purple;
+    /* Button color */
+    --button-hover-color: rgb(255, 77, 225);
+    /* Button hover color */
+    --footer-bg-color: linear-gradient(135deg, #d81b60, #6a1b9a);
+    /* Footer background gradient */
+    --footer-text-color: #fff;
+    /* Footer text color */
+}
+
+/* =============================
+            General Styles (Global Reset and Base Styles)
+            ============================= */
 * {
     margin: 0;
+    /* Reset default margins */
     padding: 0;
+    /* Reset default paddings */
     box-sizing: border-box;
+    /* Include padding and border in element's total width and height */
     font-family: Arial, sans-serif;
+    /* Set default font family */
 }
 
 body {
     text-align: center;
+    /* Center align text in the body */
     background: url('../img/background.jpg') no-repeat center center/cover;
+    /* Set background image to cover the body */
     background-size: cover;
+    /* Cover the entire body with the background image */
     background-position: center;
+    /* Center the background image */
     background-attachment: fixed;
+    /* Fix the background image to the viewport */
 }
 
 /* =============================
-   Header
-   ============================= */
+            Header (Page Header Styles)
+            ============================= */
 header {
-    color: white;
+    color: var(--text-color-light);
+    /* Set header text color using a variable */
     padding: 20px;
+    /* Add padding around header content */
 }
 
 .logo {
     width: 500px;
+    /* Set logo width */
     max-width: 80%;
+    /* Set maximum logo width for responsiveness */
 }
 
 /* =============================
-   Paragraphs
-   ============================= */
+            Paragraphs (General Paragraph Styles)
+            ============================= */
 p {
     text-align: left;
+    /* Align paragraphs to the left */
     font-size: 15px;
+    /* Set paragraph font size */
     font-weight: bold;
+    /* Set paragraph font weight to bold */
+    color: var(--text-color-light);
+    /* Set paragraph text color using a variable */
 }
 
 /* =============================
-   Categories Section
-   ============================= */
+            Categories Section (Category Grid Layout)
+            ============================= */
 .categories {
     display: flex;
+    /* Use flexbox for layout */
     flex-wrap: wrap;
+    /* Allow items to wrap onto multiple lines */
     justify-content: center;
+    /* Center items horizontally */
     gap: 20px;
+    /* Add gap between category items */
     margin: 20px;
+    /* Add margin around the categories section */
 }
 
 .category {
-    background: rgba(231, 43, 190, 0.6);
+    background: var(--background-color);
+    /* Set category background color using a variable */
     padding: 10px;
+    /* Add padding inside category items */
     border-radius: 15px;
+    /* Add rounded corners to category items */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow to category items */
     width: 100%;
+    /* Set category width to 100% of parent */
     max-width: 75%;
+    /* Set maximum category width for responsiveness */
     text-align: center;
+    /* Center align text inside category items */
 }
 
 .category img {
     width: 80px;
+    /* Set image width inside category items */
     height: auto;
+    /* Maintain image aspect ratio */
     border-radius: 10px;
+    /* Add rounded corners to images */
 }
 
 .category h2 {
     font-size: 22px;
-    color: white;
+    /* Set heading font size inside category items */
+    color: var(--text-color-light);
+    /* Set heading text color using a variable */
     margin-bottom: 10px;
+    /* Add margin below headings */
 }
 
 /* =============================
-   Menu Items
-   ============================= */
+            Menu Items (Collapsible Menu Styles)
+            ============================= */
 .menu-items {
     max-height: 0;
-    /* Start collapsed */
+    /* Initially collapse menu items */
+    width: 100%;
+    /* Set menu items width to 100% of parent */
+    max-width: 100%;
+    /* Set maximum menu items width */
     overflow: hidden;
-    /* Prevent content from showing before expansion */
+    /* Hide overflow content */
     background: rgba(255, 255, 255, 0.6);
+    /* Set semi-transparent white background */
     border-radius: 10px;
+    /* Add rounded corners to menu items */
     transition: max-height 0.4s ease-in-out;
-    /* Smooth slide effect */
+    /* Add transition for smooth height changes */
 }
 
-
 /* =============================
-   Tables
-   ============================= */
+            Tables (Table Styles)
+            ============================= */
 table {
     width: 100%;
+    /* Set table width to 100% of parent */
     border-collapse: collapse;
+    /* Collapse table borders */
 }
 
 th,
 td {
     padding: 8px;
+    /* Add padding to table cells */
 }
 
 .name {
     text-align: left;
+    /* Align name column to the left */
 }
 
 .price {
     text-align: right;
+    /* Align price column to the right */
 }
 
 td:nth-child(1) {
     text-align: left;
+    /* Align first table column to the left */
 }
 
 td:nth-child(2) {
     text-align: right;
+    /* Align second table column to the right */
 }
 
 /* =============================
-   Buttons
-   ============================= */
+            Buttons (Button Styles)
+            ============================= */
 button {
     margin-top: 10px;
+    /* Add margin above buttons */
     padding: 10px;
-    background: purple;
-    color: white;
+    /* Add padding inside buttons */
+    background: var(--background-color);
+    /* Set button background color using a variable */
+    color: var(--text-color-light);
+    /* Set button text color using a variable */
     border: none;
+    /* Remove button borders */
     cursor: pointer;
+    /* Set cursor to pointer on hover */
     border-radius: 10px;
+    /* Add rounded corners to buttons */
     font-size: 18px;
+    /* Set button font size */
     transition: background 0.3s ease;
+    /* Add transition for smooth background changes */
     width: 100%;
+    /* Set button width to 100% of parent */
 }
 
 button:hover {
-    background: rgb(255, 77, 225);
+    background: var(--highlight-color);
+    /* Change background color on button hover */
 }
 
 /* =============================
-   Footer Section
-   ============================= */
+            Footer Section (Footer Styles)
+            ============================= */
 footer {
-    background: linear-gradient(135deg, #d81b60, #6a1b9a);
-    color: #fff;
+    background: var(--footer-bg-color);
+    /* Set footer background using a gradient variable */
+    color: var(--footer-text-color);
+    /* Set footer text color using a variable */
     padding: 20px 20px;
+    /* Add padding inside the footer */
     text-align: center;
+    /* Center align text inside the footer */
 }
 
 .footer-container {
     max-width: 1200px;
+    /* Set maximum footer container width */
     margin: auto;
+    /* Center the footer container horizontally */
 }
 
 .footer-logo-img {
     width: 300px;
-    /* Adjust size as needed */
+    /* Set footer logo image width */
     max-width: 100%;
+    /* Set maximum footer logo image width for responsiveness */
 }
 
 /* =============================
-   Footer Content
-   ============================= */
+            Footer Content (Footer Content Layout)
+            ============================= */
 .footer-content {
     display: flex;
+    /* Use flexbox for layout */
     justify-content: center;
+    /* Center items horizontally */
     align-items: center;
+    /* Center items vertically */
     flex-wrap: wrap;
+    /* Allow items to wrap onto multiple lines */
     gap: 40px;
+    /* Add gap between footer content items */
     text-align: center;
+    /* Center align text inside footer content */
 }
 
 .footer-section {
     flex: 1;
+    /* Allow items to grow and shrink equally */
     min-width: 250px;
+    /* Set minimum width for footer sections */
     display: flex;
+    /* Use flexbox for layout */
     flex-direction: column;
+    /* Stack items vertically */
     align-items: center;
+    /* Center align items inside footer sections */
 }
 
 .footer-section h4 {
     font-size: 1.3em;
+    /* Set heading font size inside footer sections */
     margin-bottom: 15px;
-    border-bottom: 2px solid #fff;
+    /* Add margin below headings */
+    border-bottom: 2px solid var(--footer-text-color);
+    /* Add bottom border to headings */
     display: inline-block;
+    /* Display heading as inline-block */
     padding-bottom: 5px;
+    /* Add padding below headings */
 }
 
 .footer-section p {
     font-size: 1em;
+    /* Set paragraph font size inside footer sections */
     margin: 5px 0;
+    /* Add margin to paragraphs */
     text-align: center;
+    /* Center align text inside paragraphs */
 }
 
 /* =============================
-   Social Media Icons
-   ============================= */
+            Social Media Icons (Social Media Icons Styles)
+            ============================= */
 .social-icons {
     display: flex;
+    /* Use flexbox for layout */
     justify-content: center;
+    /* Center icons horizontally */
     gap: 15px;
+    /* Add gap between icons */
     padding-top: 10px;
+    /* Add padding above icons */
 }
 
 .social-icons a {
-    color: #fff;
+    color: var(--footer-text-color);
+    /* Set icon color using a variable */
     font-size: 1.8em;
+    /* Set icon font size */
     transition: transform 0.3s ease, color 0.3s ease;
+    /* Add transition for smooth effects */
 }
 
 .social-icons a:hover {
     transform: scale(1.2);
+    /* Scale icon on hover */
     color: #ffd700;
+    /* Change icon color on hover */
 }
 
 /* =============================
-   Footer Bottom
-   ============================= */
+            Footer Bottom (Footer Bottom Styles)
+            ============================= */
 .footer-bottom {
     display: flex;
+    /* Use flexbox for layout */
     justify-content: center;
+    /* Center items horizontally */
     align-items: center;
+    /* Center items vertically */
     text-align: center;
+    /* Center align text */
     margin-top: 20px;
+    /* Add margin above the footer bottom */
     font-size: 0.9em;
+    /* Set font size */
     opacity: 0.8;
+    /* Set opacity */
     padding: 10px 0;
+    /* Add padding */
     width: 100%;
+    /* Set width */
 }
 
 /* =============================
-   Responsive Design
-   ============================= */
+            Responsive Design (Media Queries for Responsiveness)
+            ============================= */
 @media (max-width: 1024px) {
     .categories {
         flex-direction: row;
+        /* Change flex direction to row */
         flex-wrap: wrap;
+        /* Allow items to wrap */
         justify-content: center;
+        /* Center items horizontally */
     }
 
     .category {
         width: 45%;
+        /* Set category width for medium screens */
     }
 }
 
 @media (max-width: 768px) {
     .categories {
         flex-direction: column;
+        /* Change flex direction to column */
         align-items: center;
+        /* Center items horizontally */
     }
 
     .category {
         width: 90%;
+        /* Set category width for smaller screens */
     }
 
     .logo {
         width: 250px;
+        /* Adjust logo width for smaller screens */
     }
 
     .footer-content {
         flex-direction: column;
+        /* Stack footer content vertically */
         text-align: center;
+        /* Center align text */
     }
 }
 
 @media (max-width: 480px) {
     .category {
         width: 100%;
+        /* Set category width for very small screens */
     }
 
     .logo {
         width: 200px;
+        /* Adjust logo width for very small screens */
     }
 
     button {
         font-size: 16px;
+        /* Adjust button font size for very small screens */
     }
 }

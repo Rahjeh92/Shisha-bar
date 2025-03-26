@@ -1,18 +1,21 @@
-/**
- * Toggles the visibility of a menu with a smooth slide effect.
- * @param {string} id - The ID of the menu to toggle.
- */
 function toggleMenu(id) {
     var menu = document.getElementById(id);
+    var menus = document.querySelectorAll('.menu-items');
 
     if (!menu) {
         console.error("Menu not found: " + id);
         return;
     }
 
+    menus.forEach(function (otherMenu) {
+        if (otherMenu.id !== id) {
+            otherMenu.style.maxHeight = null;
+        }
+    });
+
     if (menu.style.maxHeight) {
-        menu.style.maxHeight = null; // Collapse this menu
+        menu.style.maxHeight = null;
     } else {
-        menu.style.maxHeight = menu.scrollHeight + "px"; // Expand this menu
+        menu.style.maxHeight = menu.scrollHeight + "px";
     }
 }
