@@ -94,7 +94,7 @@ p {
     /* Center items horizontally */
     gap: 20px;
     /* Add gap between category items */
-    margin: 20px;
+    margin: 10px;
     /* Add margin around the categories section */
 }
 
@@ -109,7 +109,7 @@ p {
     /* Add subtle shadow to category items */
     width: 100%;
     /* Set category width to 100% of parent */
-    max-width: 75%;
+    max-width: 85%;
     /* Set maximum category width for responsiveness */
     text-align: center;
     /* Center align text inside category items */
@@ -158,35 +158,88 @@ p {
             ============================= */
 table {
     width: 100%;
-    /* Set table width to 100% of parent */
     border-collapse: collapse;
-    /* Collapse table borders */
 }
 
-th,
 td {
     padding: 8px;
-    /* Add padding to table cells */
+    vertical-align: top;
 }
 
-.name {
-    text-align: left;
-    /* Align name column to the left */
-}
-
-.price {
-    text-align: right;
-    /* Align price column to the right */
+/* Shisha title and price */
+td b {
+    font-size: 1.12rem;
+    color: #000000;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
 td:nth-child(1) {
     text-align: left;
-    /* Align first table column to the left */
 }
 
 td:nth-child(2) {
     text-align: right;
-    /* Align second table column to the right */
+    white-space: nowrap;
+}
+
+/* Section headers like "Cocktails mit Alkohol" */
+td[colspan="2"] b {
+    font-size: 1.12rem;
+    color: #000000;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+/* Drink name (first column item) */
+td:first-child {
+    font-size: .85rem;
+    font-weight: 600;
+    color: #222;
+}
+
+/* Price (second column) - Same as item name */
+td:nth-child(2) {
+    font-size: .85rem;
+    /* Same size as item name */
+    font-weight: 600;
+    /* Same font weight as item name */
+    color: #222;
+    /* Same color as item name */
+    text-align: right;
+    /* Keep price aligned to the right */
+}
+
+/* Drink description - Stretch it to full width */
+.drink-description {
+    font-size: 0.85rem;
+    color: #7a3a7a;
+    margin: 4px 0 0;
+    font-style: italic;
+    line-height: 1.3;
+    width: 100%;
+    /* Make the description take up full width */
+    display: block;
+    /* Ensure it behaves like a block-level element */
+    overflow-wrap: break-word;
+    /* Handle long words or URLs gracefully */
+}
+
+/* Shisha description - Stretch it to full width */
+.shisha-description {
+    font-size: 0.85rem;
+    color: #7a3a7a;
+    margin: 4px 0 0;
+    font-style: italic;
+    line-height: 1.3;
+    width: 100%;
+    /* Make the description take up full width */
+    display: block;
+    /* Ensure it behaves like a block-level element */
+    overflow-wrap: break-word;
+    /* Handle long words or URLs gracefully */
 }
 
 /* =============================
